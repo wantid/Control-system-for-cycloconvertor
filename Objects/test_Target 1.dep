@@ -1,0 +1,26 @@
+Dependencies for Project 'test', Target 'Target 1': (DO NOT MODIFY !)
+CompilerVersion: 6160000::V6.16::ARMCLANG
+F (.\test.c)(0x62AB0CB8)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O1 -ffunction-sections -Weverything -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ../../../../AppData/Local/Arm/Packs/ARM/CMSIS/5.8.0/CMSIS/Core/Include -I ./RTE/Device/STM32F767ZITx-I./RTE/_Target_1-IC:/Users/mrwan/AppData/Local/Arm/Packs/ARM/CMSIS/5.8.0/CMSIS/Core/Include-IC:/Users/mrwan/AppData/Local/Arm/Packs/Keil/STM32F7xx_DFP/2.14.1/Drivers/CMSIS/Device/ST/STM32F7xx/Include-D__UVISION_VERSION="536" -D_RTE_ -DSTM32F767xx -D_RTE_-o ./objects/test.o -MD)
+I (C:\Users\mrwan\AppData\Local\Arm\Packs\Keil\STM32F7xx_DFP\2.14.1\Drivers\CMSIS\Device\ST\STM32F7xx\Include\stm32f7xx.h)(0x60656128)
+I (C:\Users\mrwan\AppData\Local\Arm\Packs\Keil\STM32F7xx_DFP\2.14.1\Drivers\CMSIS\Device\ST\STM32F7xx\Include\stm32f767xx.h)(0x60656128)
+I (C:\Users\mrwan\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\core_cm7.h)(0x60D42F32)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x60354E20)
+I (C:\Users\mrwan\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_version.h)(0x60D42F32)
+I (C:\Users\mrwan\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_compiler.h)(0x60D42F32)
+I (C:\Users\mrwan\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_armclang.h)(0x60D42F32)
+I (C:\Users\mrwan\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\mpu_armv7.h)(0x60D42F32)
+I (C:\Users\mrwan\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cachel1_armv7.h)(0x60D42F32)
+I (C:\Users\mrwan\AppData\Local\Arm\Packs\Keil\STM32F7xx_DFP\2.14.1\Drivers\CMSIS\Device\ST\STM32F7xx\Include\system_stm32f7xx.h)(0x60656128)
+I (C:\Keil_v5\ARM\ARMCLANG\include\math.h)(0x60354E1A)
+F (RTE\Device\STM32F767ZITx\startup_stm32f767xx.s)(0x60656128)(--target=arm-arm-none-eabi -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard -masm=auto -c-gdwarf-4 -Wa,armasm,--pd,"__EVAL SETA 1"-I./RTE/_Target_1-IC:/Users/mrwan/AppData/Local/Arm/Packs/ARM/CMSIS/5.8.0/CMSIS/Core/Include-IC:/Users/mrwan/AppData/Local/Arm/Packs/Keil/STM32F7xx_DFP/2.14.1/Drivers/CMSIS/Device/ST/STM32F7xx/Include-Wa,armasm,--pd,"__UVISION_VERSION SETA 536" -Wa,armasm,--pd,"_RTE_ SETA 1" -Wa,armasm,--pd,"STM32F767xx SETA 1" -Wa,armasm,--pd,"_RTE_ SETA 1"-o ./objects/startup_stm32f767xx.o)
+F (RTE\Device\STM32F767ZITx\system_stm32f7xx.c)(0x60656128)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O1 -ffunction-sections -Weverything -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ../../../../AppData/Local/Arm/Packs/ARM/CMSIS/5.8.0/CMSIS/Core/Include -I ./RTE/Device/STM32F767ZITx-I./RTE/_Target_1-IC:/Users/mrwan/AppData/Local/Arm/Packs/ARM/CMSIS/5.8.0/CMSIS/Core/Include-IC:/Users/mrwan/AppData/Local/Arm/Packs/Keil/STM32F7xx_DFP/2.14.1/Drivers/CMSIS/Device/ST/STM32F7xx/Include-D__UVISION_VERSION="536" -D_RTE_ -DSTM32F767xx -D_RTE_-o ./objects/system_stm32f7xx.o -MD)
+I (C:\Users\mrwan\AppData\Local\Arm\Packs\Keil\STM32F7xx_DFP\2.14.1\Drivers\CMSIS\Device\ST\STM32F7xx\Include\stm32f7xx.h)(0x60656128)
+I (C:\Users\mrwan\AppData\Local\Arm\Packs\Keil\STM32F7xx_DFP\2.14.1\Drivers\CMSIS\Device\ST\STM32F7xx\Include\stm32f767xx.h)(0x60656128)
+I (C:\Users\mrwan\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\core_cm7.h)(0x60D42F32)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x60354E20)
+I (C:\Users\mrwan\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_version.h)(0x60D42F32)
+I (C:\Users\mrwan\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_compiler.h)(0x60D42F32)
+I (C:\Users\mrwan\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_armclang.h)(0x60D42F32)
+I (C:\Users\mrwan\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\mpu_armv7.h)(0x60D42F32)
+I (C:\Users\mrwan\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cachel1_armv7.h)(0x60D42F32)
+I (C:\Users\mrwan\AppData\Local\Arm\Packs\Keil\STM32F7xx_DFP\2.14.1\Drivers\CMSIS\Device\ST\STM32F7xx\Include\system_stm32f7xx.h)(0x60656128)

@@ -1,0 +1,208 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: µVision V5.36.0.0
+Copyright (C) 2021 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: Dmitriy Kurilov, Õ»” , LIC=----
+ 
+Tool Versions:
+Toolchain:       MDK-Lite  Version: 5.36.0.0
+Toolchain Path:  C:\Keil_v5\ARM\ARMCLANG\Bin
+C Compiler:      ArmClang.exe V6.16
+Assembler:       Armasm.exe V6.16
+Linker/Locator:  ArmLink.exe V6.16
+Library Manager: ArmAr.exe V6.16
+Hex Converter:   FromElf.exe V6.16
+CPU DLL:         SARMCM3.DLL V5.36.0.0
+Dialog DLL:      DCM.DLL V1.17.3.0
+Target DLL:      STLink\ST-LINKIII-KEIL_SWO.dll V3.0.9.0
+Dialog DLL:      TCM.DLL V1.53.0.0
+ 
+<h2>Project:</h2>
+C:\STM\test\test.uvprojx
+Project File Date:  12/17/2021
+
+<h2>Output:</h2>
+*** Using Compiler 'V6.16', folder: 'C:\Keil_v5\ARM\ARMCLANG\Bin'
+Build target 'Target 1'
+test.c(193): warning: '/*' within block comment [-Wcomment]
+    //RCC -> PLLCFGR |= (00001010 << 6); //*216
+                                          ^
+test.c(194): warning: '/*' within block comment [-Wcomment]
+    //RCC -> PLLCFGR |= (00 << 16); //*2
+                                     ^
+test.c(216): warning: '/*' within block comment [-Wcomment]
+    //RCC->PLLCFGR |= (01100100 << 6); //*216
+                                        ^
+test.c(217): warning: '/*' within block comment [-Wcomment]
+    //RCC->PLLCFGR |= (10 << 16); //*2
+                                   ^
+test.c(336): warning: no previous extern declaration for non-static variable 'step' [-Wmissing-variable-declarations]
+int32_t maxCount, amplitude, points, step = 0;
+                                     ^
+test.c(336): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+int32_t maxCount, amplitude, points, step = 0;
+^
+test.c(369): warning: implicit conversion turns floating-point number into integer: 'double' to 'int32_t' (aka 'int') [-Wfloat-conversion]
+        if (f_st >= 1) points = CLOCKFREQ/(FSIN*maxCount); 
+                              ~ ~~~~~~~~~^~~~~~~~~~~~~~~~
+test.c(370): warning: implicit conversion turns floating-point number into integer: 'double' to 'uint32_t' (aka 'unsigned int') [-Wfloat-conversion]
+        sin1 = amplitude + amplitude*sin(1.571*4*step/points); //1.571
+             ~ ~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+test.c(371): warning: implicit conversion turns floating-point number into integer: 'double' to 'uint32_t' (aka 'unsigned int') [-Wfloat-conversion]
+        sin2 = amplitude + amplitude*sin(1.571*4*step/points - 2.094);
+             ~ ~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+test.c(372): warning: implicit conversion turns floating-point number into integer: 'double' to 'uint32_t' (aka 'unsigned int') [-Wfloat-conversion]
+        sin3 = amplitude + amplitude*sin(1.571*4*step/points + 2.094); 
+             ~ ~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+test.c(375): warning: implicit conversion turns floating-point number into integer: 'double' to 'int32_t' (aka 'int') [-Wfloat-conversion]
+        points = CLOCKFREQ/(-FSIN*maxCount); 
+               ~ ~~~~~~~~~^~~~~~~~~~~~~~~~~
+test.c(376): warning: implicit conversion turns floating-point number into integer: 'double' to 'uint32_t' (aka 'unsigned int') [-Wfloat-conversion]
+        sin1 = amplitude + amplitude*sin(1.571*4*step/points);
+             ~ ~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+test.c(377): warning: implicit conversion turns floating-point number into integer: 'double' to 'uint32_t' (aka 'unsigned int') [-Wfloat-conversion]
+        sin2 = amplitude + amplitude*sin(1.571*4*step/points + 2.094);
+             ~ ~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+test.c(378): warning: implicit conversion turns floating-point number into integer: 'double' to 'uint32_t' (aka 'unsigned int') [-Wfloat-conversion]
+        sin3 = amplitude + amplitude*sin(1.571*4*step/points - 2.094); 
+             ~ ~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+test.c(381): warning: implicit conversion changes signedness: 'int32_t' (aka 'int') to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
+        sin1 = maxCount;
+             ~ ^~~~~~~~
+test.c(391): warning: no previous prototype for function 'TIM1_CC_IRQHandler' [-Wmissing-prototypes]
+void TIM1_CC_IRQHandler(void){
+     ^
+test.c(391): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void TIM1_CC_IRQHandler(void){
+^
+static 
+test.c(404): warning: implicit conversion turns floating-point number into integer: 'float' to 'uint32_t' (aka 'unsigned int') [-Wfloat-conversion]
+    f_st = impulses * .05f;
+         ~ ~~~~~~~~~^~~~~~
+test.c(404): warning: implicit conversion from 'volatile uint32_t' (aka 'volatile unsigned int') to 'float' may lose precision [-Wimplicit-int-float-conversion]
+    f_st = impulses * .05f;
+           ^~~~~~~~ ~
+test.c(399): warning: no previous prototype for function 'TIM6_DAC_IRQHandler' [-Wmissing-prototypes]
+void TIM6_DAC_IRQHandler(void) //<CF><EE><F1><EC><EE><F2><F0><E5><F2><FC> <ED><E0><E7><E2><E0><ED><E8><E5> <F4><F3><ED><EA><F6><E8><E8>
+     ^
+test.c(399): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void TIM6_DAC_IRQHandler(void) //<CF><EE><F1><EC><EE><F2><F0><E5><F2><FC> <ED><E0><E7><E2><E0><ED><E8><E5> <F4><F3><ED><EA><F6><E8><E8>
+^
+static 
+test.c(417): warning: implicit conversion turns floating-point number into integer: 'double' to 'int32_t' (aka 'int') [-Wfloat-conversion]
+    points = CLOCKFREQ/(FSIN*maxCount); 
+           ~ ~~~~~~~~~^~~~~~~~~~~~~~~~
+test.c(448): warning: signed shift result (0x80000000) sets the sign bit of the shift expression's type ('int') and becomes negative [-Wshift-sign-overflow]
+    GPIOB->MODER |= (2 << 30);
+                     ~ ^  ~~
+test.c(448): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+    GPIOB->MODER |= (2 << 30);
+                 ~~  ~~^~~~~
+test.c(449): warning: signed shift result (0xC0000000) sets the sign bit of the shift expression's type ('int') and becomes negative [-Wshift-sign-overflow]
+    GPIOB->OSPEEDR |= (3 << 30);
+                       ~ ^  ~~
+test.c(449): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+    GPIOB->OSPEEDR |= (3 << 30);
+                   ~~  ~~^~~~~
+test.c(453): warning: implicit conversion changes signedness: 'int32_t' (aka 'int') to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
+    TIM1->ARR = maxCount;
+              ~ ^~~~~~~~
+test.c(489): warning: implicit conversion changes signedness: 'int' to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
+        TIM6->PSC = maxCount-1; //<CF><EE><E4><EE><E1><F0><E0><F2><FC> <EF><F0><E5><E4><E4><E5><EB><E8><F2><E5><EB><FC> <E4><EB><FF> <ED><EE><E2><EE><E9> <F7><E0><F1><F2><EE><F2><FB>
+                  ~ ~~~~~~~~^~
+test.c(532): warning: signed shift result (0xC0000000) sets the sign bit of the shift expression's type ('int') and becomes negative [-Wshift-sign-overflow]
+    RCC->CFGR |= (3 << 30);
+                  ~ ^  ~~
+test.c(532): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+    RCC->CFGR |= (3 << 30);
+              ~~  ~~^~~~~
+test.c(336): warning: no previous extern declaration for non-static variable 'maxCount' [-Wmissing-variable-declarations]
+int32_t maxCount, amplitude, points, step = 0;
+        ^
+test.c(336): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+int32_t maxCount, amplitude, points, step = 0;
+^
+test.c(336): warning: no previous extern declaration for non-static variable 'amplitude' [-Wmissing-variable-declarations]
+int32_t maxCount, amplitude, points, step = 0;
+                  ^
+test.c(336): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+int32_t maxCount, amplitude, points, step = 0;
+^
+test.c(336): warning: no previous extern declaration for non-static variable 'points' [-Wmissing-variable-declarations]
+int32_t maxCount, amplitude, points, step = 0;
+                             ^
+test.c(336): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+int32_t maxCount, amplitude, points, step = 0;
+^
+test.c(338): warning: no previous extern declaration for non-static variable 'sin1' [-Wmissing-variable-declarations]
+uint32_t sin1, sin2, sin3; 
+         ^
+test.c(338): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+uint32_t sin1, sin2, sin3; 
+^
+test.c(338): warning: no previous extern declaration for non-static variable 'sin2' [-Wmissing-variable-declarations]
+uint32_t sin1, sin2, sin3; 
+               ^
+test.c(338): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+uint32_t sin1, sin2, sin3; 
+^
+test.c(338): warning: no previous extern declaration for non-static variable 'sin3' [-Wmissing-variable-declarations]
+uint32_t sin1, sin2, sin3; 
+                     ^
+test.c(338): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+uint32_t sin1, sin2, sin3; 
+^
+test.c(341): warning: no previous extern declaration for non-static variable 'impulses' [-Wmissing-variable-declarations]
+volatile uint32_t impulses, f_st;
+                  ^
+test.c(341): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+volatile uint32_t impulses, f_st;
+         ^
+test.c(341): warning: no previous extern declaration for non-static variable 'f_st' [-Wmissing-variable-declarations]
+volatile uint32_t impulses, f_st;
+                            ^
+test.c(341): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+volatile uint32_t impulses, f_st;
+         ^
+35 warnings generated.
+compiling test.c...
+linking...
+Program Size: Code=3520 RO-data=816 RW-data=0 ZI-data=1672  
+".\Objects\test.axf" - 0 Error(s), 35 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: ARM
+                http://www.keil.com/pack/ARM.CMSIS.5.8.0.pack
+                ARM.CMSIS.5.8.0
+                CMSIS (Common Microcontroller Software Interface Standard)
+   * Component: CORE Version: 5.5.0
+
+Package Vendor: Keil
+                http://www.keil.com/pack/Keil.STM32F7xx_DFP.2.14.1.pack
+                Keil.STM32F7xx_DFP.2.14.1
+                STMicroelectronics STM32F7 Series Device Support, Drivers and Examples
+   * Component: Startup Version: 1.2.5
+
+<h2>Collection of Component include folders:</h2>
+  .\RTE\_Target_1
+  C:\Users\mrwan\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include
+  C:\Users\mrwan\AppData\Local\Arm\Packs\Keil\STM32F7xx_DFP\2.14.1\Drivers\CMSIS\Device\ST\STM32F7xx\Include
+
+<h2>Collection of Component Files used:</h2>
+
+   * Component: ARM::CMSIS:CORE:5.5.0
+
+   * Component: Keil::Device:Startup:1.2.5
+      Source file:   Drivers\CMSIS\Device\ST\STM32F7xx\Source\Templates\arm\startup_stm32f767xx.s
+      Include file:  Drivers\CMSIS\Device\ST\STM32F7xx\Include\stm32f7xx.h
+      Source file:   MDK\Device\Source\ARM\STM32F76x_77x_OTP.s
+      Source file:   MDK\Device\Source\ARM\STM32F76x_77x_OPT.s
+      Source file:   Drivers\CMSIS\Device\ST\STM32F7xx\Source\Templates\system_stm32f7xx.c
+Build Time Elapsed:  00:00:02
+</pre>
+</body>
+</html>
