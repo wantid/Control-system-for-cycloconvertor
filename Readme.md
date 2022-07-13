@@ -4,7 +4,7 @@ The control system generates control impulses for cycloconverter.
 
 ## Description
 
-This repository contains a programm wrote on *C* packed in Keil uVision 5 project. The program code works on the basis of STM32 "F767ZI" debug board.
+This repository contains a programm wrote on *C* packed in Keil uVision 5 project. The program code works on the basis of STM32 «F767ZI» debug board.
 
 ## Development
 
@@ -22,7 +22,7 @@ system timer illustrates its structure, it has only 4 registers but my program u
 <p align="center"><img src="/GithubMedia/Placeholder.PNG" alt="Systick structure"></p>
 <p align="center">fig.2 - Systick structure</p>
 
-Systick doesn't have any channels, that's why using GPIO (General Purpose Input/Output) is necessary. Using GPIO leads to forming unwabted
+Systick doesn't have any channels, that's why using GPIO (General Purpose Input/Output) is necessary. Using GPIO leads to forming unwanted
 programmed delay.
 
 <p align="center"><img src="/GithubMedia/Placeholder.PNG" alt="Unwanted dead time"></p>
@@ -30,13 +30,8 @@ programmed delay.
 
 ### Second implementation
 
-Рассмотрим новую реализацию программы, существенное отличие этого решения заключается в использовании сразу трёх таймеров, 
-два из которых это TIM1 и TIM8 – таймеры с расширенным функционалом, а третий TIM2 – таймер общего назначения. 
-Использование трёх таймеров обосновано тем, что один является источником синхронизации, а два – таймеры с расширенным функционалом, 
-используются вкупе с блоком сравнения для вывода управляющих сигналов.
-Использование трёх таймеров в режимах «Master» и «Slave» позволило полностью избавиться от программной задержки в формировании импульсов управления.
-
-
+Instead of using systick, the final solution uses three timers: TIM1, TIM8 - advanced control timers and TIM2 - general purpose timer.
+These timers were used in modes «Master» and «Slave» for synchronization. This solution solved the problem with unwanted delay. 
 ## Links
 
 [Telegram] [Youtube]
