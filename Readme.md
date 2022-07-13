@@ -4,30 +4,26 @@ The control system generates control impulses for cycloconverter.
 
 ## Description
 
-This repository contains a programm wrote on *C* packed Keil uVision 5 project. The program code works on the basis of STM32 "F767ZI" debug board.
+This repository contains a programm wrote on *C* packed in Keil uVision 5 project. The program code works on the basis of STM32 "F767ZI" debug board.
 
 ## Development
 
-Прежде всего, для синтеза программы реализующей формирование управляющих импульсов необходимо задаться сигналами 
-управления и их количеством. В исследуемом преобразователе реализуется управление на базе шести транзисторов, сигналы, 
-подводимые к ним сигналы в модели, получены ранее в прошлой главе. НПЧ-6 работает на синхронной частоте равной 50 Гц, 
-на ключи подаются импульсы длиной 3,3 мс. 
+First of all, for creating a program that forms control impulses, it is necessary to know count and form of the impulses. 
+In my case, there are six impulses 3,3ms length, because of cycloconverter consist of six transistors and it works on 50 Hz. 
 
 <p align="center"><img src="/GithubMedia/Placeholder.PNG" alt="Control impulses"></p>
 <p align="center">fig.1 - Control impulses</p>
 
 ### First implementation
 
-Реализация системы управления на базе системного таймера по своей имплементации является довольно простой, 
-поэтому изначально программа, формирующая импульсы управления, была написана именно на нём. Простоту системного 
-таймера наглядно иллюстрирует его структура, поскольку у этого таймера всего четыре регистра. При этом используются лишь два.
+Creating control system on Systick is a simple issue, that's why first implementation was created using it. Simplicity of a 
+system timer illustrates its structure, it has only 4 registers but my program uses only 2.
 
 <p align="center"><img src="/GithubMedia/Placeholder.PNG" alt="Systick structure"></p>
 <p align="center">fig.2 - Systick structure</p>
 
-Так как системный таймер не имеет собственных каналов, привязанных с к выводам микроконтроллера, установка открытого и закрытого 
-состояния вывода с микроконтроллера устанавливалась не напрямую, а через регистр GPIO. По этой причине на выходных сигналах 
-появлялась вынужденная программная задержка. 
+Systick doesn't have any channels, that's why using GPIO (General Purpose Input/Output) is necessary. Using GPIO leads to forming unwabted
+programmed delay.
 
 <p align="center"><img src="/GithubMedia/Placeholder.PNG" alt="Unwanted dead time"></p>
 <p align="center">fig.3 - Unwanted dead time</p>

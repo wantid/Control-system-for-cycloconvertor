@@ -4,7 +4,7 @@ The control system generates control impulses for cycloconverter.
 
 ## Description
 
-This repository contains a programm wrote on *C*. The program code works on the basis of STM32 "F767ZI" debug board.
+This repository contains a programm wrote on *C* packed Keil uVision 5 project. The program code works on the basis of STM32 "F767ZI" debug board.
 
 ## Development
 
