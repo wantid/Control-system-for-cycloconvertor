@@ -19,13 +19,13 @@ In my case, there are six impulses 3,3ms length, because of cycloconverter consi
 Creating control system on Systick is a simple issue, that's why first implementation was created using it. Simplicity of a 
 system timer illustrates its structure, it has only 4 registers but my program uses only 2.
 
-<p align="center"><img src="/GithubMedia/Structure.PNG" alt="Systick structure"></p>
+<p align="center"><img src="/GithubMedia/Structure.png" alt="Systick structure"></p>
 <p align="center">fig.2 - Systick structure</p>
 
 Systick doesn't have any channels, that's why using GPIO (General Purpose Input/Output) is necessary. Using GPIO leads to forming unwanted
 programmed delay.
 
-<p align="center"><img src="/GithubMedia/Delay.PNG" alt="Unwanted dead time"></p>
+<p align="center"><img src="/GithubMedia/Delay.png" alt="Unwanted dead time"></p>
 <p align="center">fig.3 - Unwanted dead time</p>
 
 ### Second implementation
